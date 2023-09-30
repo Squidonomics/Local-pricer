@@ -5,6 +5,9 @@
     "icons": {
         
     },
+    "action": {
+        "default_popup": "popover.html"
+    },
     "content_scripts": [
         {
             "js": [
