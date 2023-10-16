@@ -6,7 +6,9 @@
         
     },
     "action": {
-        "default_popup": "popover.html"
+        "default_popup": "popover.html",
+        "default_popup_width": 500,
+        "default_popup_height": 400
     },
     "permissions": [
         "storage"
@@ -17,7 +19,8 @@
     "content_scripts": [
         {
             "js": [
-                "scripts/content.js"
+                "scripts/content.js",
+                "scripts/location.js"
             ],
             "matches": [
                 "https://*/*"
