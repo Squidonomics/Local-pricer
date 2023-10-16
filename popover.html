@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Extension</title>
-  </head>
-  <body>
-    <script src="service-worker.js"></script>
-    <button id="regButton" type="button">Regulations</button>
+<html width="400" height="300">
+
+<head>
+  <title>My Extension</title>
+  <script src="service-worker.js"></script>
+  <script src="scripts/location.js"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="parent">
+    <h2 class="ml-10 mr-10" style="white-space: nowrap; color: white;">Your Current Location Is:</h1>
+    <h1 id="savedText"></h1>
+    <div class="group">
+      <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+        <g>
+          <path
+            d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+          </path>
+        </g>
+      </svg>
+      <input placeholder="Location" type="search" id="inputText" class="input">
+    </div>
+    <button class="button mt-10">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+      </svg>
+      <div class="text mt-10" id="submitButton">Set Location</div>
+    </button>
+  </div>
+  
 </body>
+
 </html>
