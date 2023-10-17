@@ -78,6 +78,31 @@ function createPrettyPrice(price) {
     return outerDiv;
 }
 
+function createLandingPagePrice(price) {
+    const prefixEmoji = document.createElement("span");
+    const dollarSign = document.createElement("span");
+    const wholeNumber = document.createElement("span");
+    const cents = document.createElement("span");
+
+    prefixEmoji.classList.add("Price__currency__QSapR");
+    dollarSign.classList.add("Price__currency__QSapR");
+    wholeNumber.classList.add("Price__whole__mQGs5");
+    cents.classList.add("Price__fractional__wJiJp");
+
+    prefixEmoji.innerHTML = "✴️"
+    dollarSign.innerHTML = "$";
+    wholeNumber.innerHTML = Math.trunc(price);
+    cents.innerHTML = (price + "").split(".")[1];
+
+    const outerDiv = document.createElement("span");
+    outerDiv.appendChild(prefixEmoji);
+    outerDiv.appendChild(dollarSign);
+    outerDiv.appendChild(wholeNumber);
+    outerDiv.appendChild(cents);
+
+    return outerDiv; 
+}
+
 function createTooltip(targetElement, tooltipText) {
     const tooltipElement = document.createElement("div");
     tooltipElement.classList.add("tooltip");
